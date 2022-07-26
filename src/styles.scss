@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bgprimary: rgb(20, 22, 37);
+    --bgsecondary: rgb(37, 41, 69);
+    --textprimary: white;
+    --textsecondary: rgb(223, 227, 250);
+    --bginvoice: rgb(30, 33, 57);
+    --transition: color 0.3s ease 0s;
+    --fontsize: 0.75rem;
+}

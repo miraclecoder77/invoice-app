@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div class="header_title">
+        <h2>Invoices</h2>
+        <span class="span-header">there are 7 total invoices.</span>
+    </div>
+    <div class="header_filter" >
+       <div type="button" (click)="dropDownToggle()"  class="filter-btn" >
+            <span>Filter  
+                <span class="filter-status">by status</span>
+            </span>
+            <img id="image" src="../../assets/images/down-arrow-svgrepo-com.svg" alt="" class="img-fluid">
+        </div>
+       <ul class="dropdown-menu" *ngIf="showDropDown">
+            <li class="dropdown-item">
+                <input class="input" type="checkbox">
+                <label >Paid</label>
+            </li>
+            <li class="dropdown-item">
+                <input class="input" type="checkbox">
+                <label >Pending</label>
+            </li>
+            <li class="dropdown-item">
+                <input class="input" type="checkbox">
+                <label >Draft</label>
+            </li>
+        </ul>
+    </div>
+    <div class="header_btn"  >
+        <button class="button" (click)="toggleSidebar()">     
+            <img src="../../assets/images/plus.png" alt="">
+            <span>
+                New <span class="btn-span">invoice</span>
+            </span>
+        </button>
+    </div>
+
+</div>

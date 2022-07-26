@@ -1,0 +1,23 @@
+{
+  "invoices": [
+    {
+      "address": "Ikeja, lagos",
+      "city": "Lagos",
+      "postcode": "100212.",
+      "country": "Nigeria",
+      "clientName": "bobo",
+      "clientStreet": "Ikeja, lagos",
+      "clientCity": "Lagos",
+      "clientPostcode": "",
+      "clientCountry": "Nigeria",
+      "date": "2022",
+      "paymentTerm": "7",
+      "description": "new invoice",
+      "itemName": "tesla",
+      "itemQty": "",
+      "itemPrice": "15000",
+      "itemTotal": "",
+      "id": 2
+    }
+  ]
+}

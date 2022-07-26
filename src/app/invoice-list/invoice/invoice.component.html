@@ -1,0 +1,21 @@
+<div class="wrapper "   [routerLink]="['/dashboard/invoice/'+ invoice.id]"  *ngFor="let invoice of invoiceData"   >        
+    <h2 class="invoice_title">
+        <span>#</span>RT3080
+    </h2>
+    <div class="invoice_paymentDue">
+        {{invoice.address}}
+    </div>
+    <div class="invoice_clientName">
+        {{invoice.clientName}}
+    </div>
+    <div class="invoice_total">
+        $1,800.9
+    </div>
+    <div class="invoice_status status-paid">
+        <div class="status__circle"></div>
+        <div class="status__text">Paid</div>
+    </div>
+    <img src="" alt="">
+</div>
+
+

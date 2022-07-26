@@ -1,0 +1,93 @@
+<div class="wrapper container">
+    <a routerLink="" class="navigate">
+            <img src="../../../assets/images/arrow-left-2-svgrepo-com.svg" alt="">
+            <span>Go back</span>
+    </a>
+    <section class="header">
+        <span class="header__span">Status</span>
+        <div class="status ">
+            <div class="status__circle"></div>
+            <div class="status__text">Paid</div>
+        </div>
+        <div class="header__button">
+            <button class="edit"> Edit</button>
+            <button  class="delete" (click)="delete()">Delete</button>
+        </div>
+    </section>
+    <section class="body">
+        <div class="body__title">
+            <h1 >
+                <span>#</span>xm9141
+            </h1>
+            <span>{{invoiceData?.description}}</span>
+        </div>
+        <address class="address">
+            <span>{{invoiceData?.address}}</span>
+            <span>{{invoiceData?.city}}</span>
+            <span>{{invoiceData?.postcode}}</span>
+            <span>{{invoiceData?.country}}</span>
+        </address>
+        <div class="body__dates">
+            <div class="invoicedate">
+                <span class="span">Invoice date</span>
+                <span class="date">21 Aug 2021</span>
+            </div>
+            <div class="paymentdate">
+                <span class="span">Payment due</span>
+                <span class="date">20 Sep 2022</span>
+            </div>
+        </div>
+        <address class="clientaddress">
+            <div>Bill to</div>
+            <div class="clientname ">{{invoiceData?.clientName}}</div>
+            <span></span>
+            <span></span>
+            <span>{{invoiceData?.clientPostcode}}</span>
+            <span>{{invoiceData?.clientCountry}}</span>
+        </address>
+        <div class="body__email">
+            <span class="emailtitle">Sent to</span>
+            <a >{{invoiceData?.clientEmail}}</a>
+        </div>
+        <div class="invoicetable">
+            <table class="table">
+                <thead class="table__head">
+                    <tr>
+                        <th class="th">Item Name</th>
+                        <th class="th">Qty</th>
+                        <th class="th">Price</th>
+                        <th class="th">Total</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+                    <tr class="item">
+                        <td class="item__name">{{invoiceData?.itemName}}</td>
+                        <td class="item__Qty">{{invoiceData?.itemQty}}</td>
+                        <td class="item__price">{{invoiceData?.itemPrice}}</td>
+                        <td class="item__total">{{invoiceData?.itemPrice}}</td>
+                    </tr>
+                    <tr class="item">
+                        <td class="item__name">{{invoiceData?.itemName}}</td>
+                        <td class="item__Qty">{{invoiceData?.itemQty}}</td>
+                        <td class="item__price">{{invoiceData?.itemQty}}</td>
+                        <td class="item__total">{{invoiceData?.itemTotal}}</td>
+                    </tr>
+                </tbody>
+                <tfoot class="table__footer">
+                    <tr>
+                        <th class="amount">Amount Due</th>
+                        <th class="empty"></th>
+                        <th class="empty"></th>
+                        <th class="invoicetotal">{{invoiceData?.itemTotal}}</th>
+                    </tr>
+                </tfoot>
+            </table> 
+        </div>
+    </section>
+</div>
+<!-- <div class="invoicefooter">
+    <button class="editbtn btn">Edit</button>
+    <button class="deletebtn btn">Delete</button>
+</div> -->
+
+

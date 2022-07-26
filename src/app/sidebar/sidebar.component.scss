@@ -1,0 +1,132 @@
+.sidebar {
+    border-radius:0px;
+    display: flex;
+    height: 5rem;
+    background: rgb(30, 33, 57);
+    outline: none;
+    border: none;
+   
+    .sidebar-logo{
+        flex: 1.35;
+        height:5rem;
+        width: 5rem;
+        border-radius:0px bb0px 20px 0px;
+        background: rgb(124, 93, 250);
+        display: grid;
+        place-content: center; 
+        position: ab;
+    }
+    .sidebar-logo::after{
+        content:"";
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 50%;
+        background: rgb(146, 119, 255);
+        border-radius: 20px 0px;
+    }
+
+    img {
+        height: 2rem;
+        width: 2rem;
+        width: 100%;
+        height: auto;
+       
+    }
+    // .img::after {
+    //     position:absolute;
+    // }
+    .sidebar-nav{
+        flex: 7;
+        width: 100%;
+        height: 5rem;
+        // background: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: right;
+        gap: 1rem;
+        button {
+            background: none;
+        }
+        .themetoggle {
+            border-radius: 50%;
+            color: initial;
+            height: 2rem;
+            width: 2rem;
+        }
+        .divider {
+            border-right: 2px solid grey;
+            margin: 0;
+            height: 100%;
+            width: 1px;
+        }
+        .sidebar-avatar {
+            border-radius: 50%;
+            height: 2rem;
+            width: 2rem;
+            margin-right: 1rem;
+    
+        }
+}
+
+
+} 
+button {
+    outline: none!important;
+    border: none;
+}
+//pop-up modal
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+}
+
+//media query for desktop screens
+@media only screen and (min-width: 900px)  {
+    .sidebar {
+        // position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        width: 6.4375rem;
+        border-radius:0px 20px 20px 0px;
+        .sidebar-logo {
+            height: 6.4375rem;
+            width: 6.4375rem;
+        }
+        .sidebar-nav {
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            justify-content: flex-end;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            .divider{
+                border-top: 2px solid grey;
+                width: 100%;
+                height: 1px;
+                margin: 0;
+            }
+            .themetoggle{
+                background: inherit;
+            }
+            .sidebar-avatar {
+                margin-right: 0rem;
+            }
+            img {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+        
+}

@@ -1,0 +1,124 @@
+<main class="layout">
+    <div class="form-wrapper">
+        <div class="form-header">
+            <h1>Create Invoice</h1>
+        </div>
+        <form class="form-container" [formGroup]="invoiceForm">
+            <!-- bill from fieldset -->
+            <fieldset class="billFrom">
+                <legend>Bill From</legend>
+                <div class="billFrom__fields fields">
+                    <div class="input address-street">
+                        <label >Street Address</label>
+                        <input formControlName="address" >
+                    </div>
+                    <div class="input adddress-city">
+                        <label >City</label>
+                        <input formControlName="city">
+                    </div>
+                    <div class="input postcode" >
+                        <label > Post Code</label>
+                        <input formControlName="postcode" >
+                    </div>
+                    <div class="input country">
+                        <label > Country</label>
+                        <input formControlName="country">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- biil to fieldset -->
+            <fieldset class="billTo mt-3">
+                <legend>Bill To</legend>
+                <div class="fields biilTo__fields">
+                    <div class="input name">
+                        <label > Client's Name</label>
+                        <input formControlName="clientName">
+                    </div>
+                    <div class="input email">
+                        <label >Client's Email</label>
+                        <input placeholder="eg, email@example.com" formControlName="clientEmail">
+                    </div>
+                    <div class="input street">
+                        <label> Street</label>
+                        <input formControlName="clientStreet">
+                    </div>
+                    <div class="input city">
+                        <label >City</label>
+                        <input formControlName="clientCity" >
+                    </div>
+                    <div class="input postcode">
+                        <label >PostCode</label>
+                        <Input formControlName="clientPostcode">
+                    </div>
+                    <div class="input country">
+                        <label >Country</label>
+                        <input formControlName="clientCountry">
+                    </div>
+                </div>
+            </fieldset>
+    
+            <!-- payment info -->
+             <fieldset>
+                <div class="fields payment">
+                    <div class="invoiceDate">
+                        <label>Invoice Date</label>
+                        <div class="datepicker">
+                            <input type="date" formControlName="date" >
+                        </div>
+                    </div>
+                    <div class="payment__terms">
+                        <label > Payment Terms</label>
+                        <div class="select-wrapper">
+                            <select class="select" formControlName="paymentTerm">
+                                <option value="1">Net 1 Day</option>
+                                <option value="7">Net 7 Day</option>
+                                <option value="14">Net 14 Day</option>
+                                <option value="30">Net 30 Day</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payment__description">
+                        <label >description</label>
+                        <input formControlName="description">
+                    </div>
+                </div>
+            </fieldset>
+    
+            <!-- item list -->
+            <fieldset class="itemList"> 
+                <legend>ItemList</legend>
+                <div >
+                    <div *ngIf="!show" class="itemList__wrapper">
+                        <div class="input">
+                            <label >Item Name</label>
+                            <input formControlName="itemName">
+                        </div>
+                        <div class="input">
+                            <label>Qty</label>
+                            <Input formControlName="itemQty">
+                        </div>
+                        <div class="input">
+                            <label >Price</label>
+                            <input formControlName="itemPrice">
+                        </div>
+                        <div class="input">
+                            <label >Total</label>
+                            <div class="input">200</div>
+                             <input {{total}} disabled>
+                        </div> 
+                        <button >
+                            <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill-rule="nonzero"></path></svg>
+                        </button>
+                    </div>
+                    <button class="itemList__Btn"> + Add New Item</button>
+                </div>
+            </fieldset> 
+        </form> 
+        <div class="form-btn-group">
+            <button class="button" (click)="toggleSidebar()" > Discard</button>
+            <button class="button">Save as Draft</button>
+            <button class="button" (click)="submit()"> Save & Send</button>
+        </div>
+    </div>
+</main>

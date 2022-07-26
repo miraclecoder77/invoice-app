@@ -1,0 +1,66 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    aside {
+        position: sticky;
+        top: 0px;
+        z-index: 20;
+        height: 5rem;
+        background: var(--bgprimary);
+        transition: background 0.3s ease 0s;
+        align-items: center;
+    
+    }
+    main {
+        position: relative;
+        padding: 2rem 1.5rem 0px 1.5rem;
+        flex: 1 1 0%;
+        display: flex;
+        overflow-y:scroll;
+        width: 100%;
+        background: var(--bgprimary);
+        .dashboard {
+            width: 100%;
+        }
+        .sidebar-form {
+            display: grid;
+            position: fixed;
+            top: 5rem;
+            left: 0px;
+            z-index: 10;
+            transition: var(--transition);
+            // width: 100vw;
+            height: 100%;
+            max-width: 40rem;
+            
+        }
+    }
+
+}
+
+
+
+//media query for Tablets, Desktops and large screens
+@media only screen and (min-width: 768px)  {
+    .layout {
+        flex-direction: row;
+        aside {
+            width: 6.4375rem;
+            height: 100vh;
+        }
+        main {
+            width: 100%;
+            padding: 5rem 15rem 0px 15rem;
+            margin-top: 0;
+            .sidebar-form {
+                top: 0px;
+                left: 6.4375rem;
+                height: 100%;
+            }
+        }
+    }
+
+}
+

@@ -1,0 +1,236 @@
+.layout {
+    height: 100vh;
+    width: 100%;
+    background: var(--bgprimary);
+    padding: 0px 1rem 0px 1.5rem;
+    color: var(--textprimary);
+    border: 1px solid var(--bginvoice);
+}
+.form-wrapper {
+    display: grid;
+    grid-template-rows:10% 75% 15%;
+    position: relative;
+}
+.form-header {
+    padding-top: 0.5rem;
+}
+.form-container {
+    height: 80vh;
+    overflow-y: scroll;
+    fieldset {
+        border: none;
+    }
+    .billFrom {
+        &__fields {
+            .input{
+                display: flex;
+                flex-direction: column;
+                gap: 0.625rem;
+                color: var(--textsecondary);
+                font-size: var(--fontsize);
+                line-height: 1.125;
+                letter-spacing: -0.25px;
+            }
+            .address-street {
+                grid-column: 1 / -1;
+            }
+            .address-city {
+                grid: 1 / 2;
+    
+            }
+            .postcode {
+                grid-column: 2 / -1;
+            }
+            .country {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+    .billTo {
+        .name {
+            grid-column: 1 / -1 ;
+        }
+        .email {
+            grid-column: 1 / -1;
+        }
+        
+        .street {
+            grid-column: 1 / -1;
+        }
+        
+        .city {
+            grid-column: 1 / 2;
+        }
+        
+        .postcode {
+            grid-column: 2 / -1;
+        }
+        .country {
+            grid-column: 1 / -1;
+        }
+    }
+    .payment {
+        margin-top: 1rem;
+        .invoiceDate {
+            grid-column: 1 / 2 ;
+        }
+        &__terms {
+            grid-column: 2 / -1;
+            .select-wrapper {
+                position: relative;
+                grid-column: 1 / -1;
+                
+                .select {
+                    width: 100%;
+                    appearance: none;
+                    outline: none;
+                    background: var(--bgInvoice);
+                    padding: 1rem 1.25rem;
+                    font-size: var(--fontsize);
+                    color: var(--textprimary);
+                    font-weight: bold;
+                    transition: color 0.3s ease 0s, border 0.3s ease 0s, background 0.3s ease 0s;
+                    option {
+                        background: rgb(30, 33, 57);
+                    }
+                }
+            }
+        }
+        &__description {
+            grid-column: 1 / -1;
+        }
+    }
+    .itemList {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 4rem repeat(4, 1fr) min-content;
+            gap: 1.5rem 1rem;
+            margin-bottom: 3rem;
+            :nth-child(1) {
+                grid-column: 1 / -1;
+            }
+            :nth-child(3) {
+                grid-column: 2 / span 2;
+            }
+            :nth-child(4) {
+                grid-column: 4 / span 2;
+                input {
+                    width: 100%;
+                    border-radius: 4px;
+                    outline: none;
+                    border: none;
+                    padding: 1rem 0px;
+                    background: transparent;
+                    color: rgb(136, 142, 176);
+                }
+            }
+            .input {
+                display: flex;
+                flex-direction: column;
+                gap: 0.625rem;
+                color: var(--textsecondary);
+                font-size: 0.75rem;
+                line-height: 1.125;
+                letter-spacing: -0.25px;
+            }
+            button {
+                grid-column: -2 / -1;
+                display: flex;
+                align-self: end;
+                -webkit-box-pack: center;
+                justify-content: center;
+                height: 3rem;
+                border: none;
+                background: transparent;
+                outline: none;
+            }
+        }
+        &__Btn {
+            // margin-right: 2rem;
+            width: 100%;
+            border: none;
+            border-radius: 10rem;
+            padding: 1rem 1.5rem;
+            font-size: var(--fontsize);
+            font-weight: 700;
+            line-height: 1.25;
+            transition: background 0.3s ease 0s, color 0.3s ease 0s;
+            outline: none;
+            background: rgb(37, 41, 69);
+            color: var();
+        }
+
+    }
+    legend {
+        margin-bottom: 1.5rem;
+        transition: color 0.3s ease 0s;
+        font-size: 0.75rem;
+        line-height: 1.125;
+        letter-spacing: -0.25px;
+        color: rgb(124, 93, 250);
+        font-weight: bold;
+    }
+    .fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    label {
+        color: var(--textsecondary);
+        transition: var(--transitons);
+    }
+    input {
+        background: var(--bginvoice);
+        border: 1px solid rgb(37, 41, 69);
+        border-radius: 4px;
+        padding: 1rem 1.25rem;
+        font-size: var(--fontsize);
+        width: 100%;     
+        color: var(--textprimary);
+        outline: none;
+        font-weight: bold;
+        transition: color 0.3s ease 0s, border 0.3s ease 0.3s, background 0.3s ease 0s;
+    }
+}
+.form-btn-group {
+    display: flex;
+    width: 100%;
+    position: sticky;
+    gap: 0.5rem;
+    padding: 1.5rem 1.5rem;
+    :nth-child(1) {
+        margin-right: auto; 
+        background: var(--bginvoice);   
+    }
+    :nth-child(3) {
+        background: rgb(124, 93, 250);
+        color: white; 
+    }
+    .button {
+        color: var(--textprimary);
+        width: initial;
+        outline: none;
+        border: none;
+        max-height: 2.9rem;
+        line-height: 1.25;
+        font-size: var(--fontsize);
+        font-weight: 700;
+        padding: 1rem; 
+        background: rgb(37, 41, 69);
+        border-radius: 10rem;
+        transition: background 0.3s ease 0s, color 0.3s ease 0s;
+
+    }
+
+}
+
+
+//media query for Tablets, Desktops and large screens
+@media only screen and (min-width: 768px) {
+    .layout {
+        width: 100%;
+        border-radius: 0px 20px 20px 0px;
+    }
+}
