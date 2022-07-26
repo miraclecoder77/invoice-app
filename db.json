@@ -18,6 +18,25 @@
       "itemPrice": "15000",
       "itemTotal": "",
       "id": 2
+    },
+    {
+      "address": "",
+      "city": "",
+      "postcode": "",
+      "country": "",
+      "clientName": "",
+      "clientStreet": "",
+      "clientCity": "",
+      "clientPostcode": "",
+      "clientCountry": "",
+      "date": "",
+      "paymentTerm": "",
+      "description": "",
+      "itemName": "",
+      "itemQty": "",
+      "itemPrice": "",
+      "itemTotal": "",
+      "id": 3
     }
   ]
 }
